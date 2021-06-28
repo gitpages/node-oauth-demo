@@ -1,7 +1,13 @@
+addEventListener("fetch", (event) => {
+  event.respondWith(handle(event.request));
+});
+
+async function handle(request) {
+  
 // Fill in your client ID and client secret that you obtained
 // while registering the application
-const clientID = '7e015d8ce32370079895'
-const clientSecret = '2b976af0e6b6ceea2b1554aa31d1fe94ea692cd9'
+const clientID = '4aa50821a3882aad7be6'
+const clientSecret = '3bafc0c2d3a189f0edd32789b5838de0b7151e6c'
 
 const Koa = require('koa');
 const path = require('path');
@@ -49,3 +55,5 @@ app.use(main);
 app.use(route.get('/oauth/redirect', oauth));
 
 app.listen(8080);
+
+}
