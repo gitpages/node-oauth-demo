@@ -1,9 +1,3 @@
-addEventListener("fetch", (event) => {
-  event.respondWith(handle(event.request));
-});
-
-async function handle(request) {
-  
 // Fill in your client ID and client secret that you obtained
 // while registering the application
 const clientID = '4aa50821a3882aad7be6'
@@ -55,5 +49,3 @@ app.use(main);
 app.use(route.get('/oauth/redirect', oauth));
 
 app.listen(8080);
-
-}
